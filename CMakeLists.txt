@@ -8,6 +8,7 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Charts)
 
 add_definitions(-D USE_QT)
+set (CMAKE_CXX_STANDARD 14)
 
 add_executable(${PROJECT_NAME} "main.cpp")
 
