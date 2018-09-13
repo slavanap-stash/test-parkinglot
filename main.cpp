@@ -254,6 +254,7 @@ int main(int argc, char *argv[]) {
             qCritical() << QObject::tr("Car Id=%1 id duplication").arg(id);
             return 2;
         }
+        ids.insert(id);
         QString temp = carInfo["ArrivalTime"].toString();
         QDateTime arrival = QDateTime::fromString(temp, Qt::DateFormat::ISODate);
         if (!arrival.isValid()) {
