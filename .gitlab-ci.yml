@@ -1,0 +1,12 @@
+build:
+  image: ubuntu:bionic
+  tags:
+  - docker
+  script:
+  - apt-get update -qq && apt-get upgrade -qq
+  - apt-get install -qq build-essential cmake qt5-default libqt5charts5-dev
+  - cmake . -DCMAKE_BUILD_TYPE=Release
+  - make
+  artifacts:
+    paths:
+    - ParkingLot
